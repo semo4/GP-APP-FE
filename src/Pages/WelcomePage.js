@@ -30,7 +30,7 @@ const WelcomePage = () => {
 
       {/* Navigation Bar */}
       <nav className="navbarW">
-        <img src={require('./images/logo.png')} alt="GenNews Logo" className="logoW" />
+        <img src={require('../images/logo.png')} alt="GenNews Logo" className="logoW" />
         <div className="navbar-linksW">
           <Link to="/signup" className="nav-linkW">
             Sign Up

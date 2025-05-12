@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './AboutUs.css';
 import Lottie from 'lottie-react';
 import animationData from '../images/Animation - 1729347628307.json'; 
-import Logo from './images/Logo.png';
+import Logo from '../images/logo.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
