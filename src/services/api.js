@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://gp-app-cem5.onrender.com/",
+  baseURL: "https://gp-app-be.onrender.com/",
 });
 
 // API methods
