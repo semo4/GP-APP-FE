@@ -210,7 +210,7 @@ const handleDeleteArticles = async () => {
       }
 
       // Make DELETE request with user_id as a query parameter
-      const response = await fetch(`http://localhost:8000/delete-articles?user_id=${user.uid}`, {
+      const response = await fetch(`https://gp-app-be.onrender.com/delete-articles?user_id=${user.uid}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       });
