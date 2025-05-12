@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import { auth } from '../firebase';
 import './reset-password1.css';
-import Logo from '../images/logo.png';
+import Logo from '../images/Logo.png';
 
 
 const ResetPassword1 = () => {
