@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../images/Logo.png';  // Assuming you have a logo image in the images folder
+import logo from './images/Logo.png';  // Assuming you have a logo image in the images folder
 import step1 from '../images/step1.png';
 import step2 from '../images/step2.png';
 import step3 from '../images/step3.png';

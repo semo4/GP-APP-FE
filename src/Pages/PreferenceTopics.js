@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { doc, updateDoc, arrayUnion } from 'firebase/firestore';
 import { auth, db } from '../firebase';
 import './PreferenceTopics.css';
-import logo from '../images/Logo.png';
+import logo from './images/Logo.png';
 
 const PreferenceTopics = () => {
   const [selectedTopics, setSelectedTopics] = useState([]);
