@@ -29,7 +29,7 @@ const ResetPassword1 = () => {
     if (email) {
       try {
         await sendPasswordResetEmail(auth, email, {
-          url: 'https://gp-app-be.onrender.com/login', 
+          url: 'https://gp-app-fe.onrender.com/login', 
           handleCodeInApp: true,
         });
         setSuccessMessage("Sent successfully");
