@@ -215,7 +215,7 @@ const [article, setArticle] = useState(null);
       const user = auth.currentUser;
       if (!user) throw new Error("User not authenticated");
   
-      const response = await fetch("http://127.0.0.1:8000/generate-article/", {
+      const response = await fetch("https://gp-app-be.onrender.com/generate-article/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -343,7 +343,7 @@ const [article, setArticle] = useState(null);
           try {
             // Replace 127.0.0.1 with your backend URL if needed
             const user = auth.currentUser;
-            const res = await fetch(`http://127.0.0.1:8000/news?topic=${t}`);
+            const res = await fetch(`https://gp-app-be.onrender.com/news?topic=${t}`);
             if (!res.ok) {
               throw new Error(`Failed to fetch news for topic: ${t}`);
             }
@@ -391,7 +391,7 @@ const [article, setArticle] = useState(null);
   
       console.log("📡 Sending request to backend...");
   
-      const response = await fetch("http://127.0.0.1:8000/generate-article/", {
+      const response = await fetch("https://gp-app-be.onrender.com/generate-article/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -416,7 +416,7 @@ const [article, setArticle] = useState(null);
       let uniqueTitle = selectedTopic;
   
       try {
-        const titleResponse = await fetch("http://127.0.0.1:8000/generate-title/", {
+        const titleResponse = await fetch("https://gp-app-be.onrender.com/generate-title/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -830,7 +830,7 @@ const [article, setArticle] = useState(null);
       console.log("📡 Generating full article for:", article.title);
   
       // Call your backend to generate the full article using the article title as the prompt.
-      const response = await fetch("http://127.0.0.1:8000/generate-article/", {
+      const response = await fetch("https://gp-app-be.onrender.com/generate-article/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -874,7 +874,7 @@ const existingTitles = chats.map(chat => chat.title);
 // ✨ Step 2: Generate a new unique title using AI
 let uniqueTitle = article.title; // fallback
 try {
-  const titleResponse = await fetch("http://127.0.0.1:8000/generate-title/", {
+  const titleResponse = await fetch("https://gp-app-be.onrender.com/generate-title/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -941,7 +941,7 @@ const handleStyleClick = async (answerType) => {
       const user = auth.currentUser;
       if (!user) throw new Error("User not authenticated");
 
-      const response = await fetch('http://127.0.0.1:8000/enhance-article/', {
+      const response = await fetch('https://gp-app-be.onrender.com/enhance-article/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -995,7 +995,7 @@ const handleStyleClick = async (answerType) => {
 
 const fetchTweetImages = async (topic) => {
   try {
-    const response = await fetch("http://127.0.0.1:8000/tweet-images/", {
+    const response = await fetch("https://gp-app-be.onrender.com/tweet-images/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ topic }),
@@ -1017,7 +1017,7 @@ const fetchTweetImages = async (topic) => {
   // Fetch images based on article content and title
   const fetchNewsImages = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/article-imagesNew/", {
+      const response = await fetch("https://gp-app-be.onrender.com/article-imagesNew/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -1036,7 +1036,7 @@ const fetchTweetImages = async (topic) => {
   
   const fetchUnsplashImages = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/unsplash-images/", {
+      const response = await fetch("https://gp-app-be.onrender.com/unsplash-images/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -1055,7 +1055,7 @@ const fetchTweetImages = async (topic) => {
 
   const fetchNewsImages = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/newsapi-images/", {
+      const response = await fetch("https://gp-app-be.onrender.com/newsapi-images/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -1076,7 +1076,7 @@ const fetchTweetImages = async (topic) => {
 
   const fetchNewsAPIImages = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/newsapi-images/", {
+      const response = await fetch("https://gp-app-be.onrender.com/newsapi-images/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1098,7 +1098,7 @@ const fetchTweetImages = async (topic) => {
 
   const fetchSerpAPIImages = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/serpapi-images/", {
+      const response = await fetch("https://gp-app-be.onrender.com/serpapi-images/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -1414,7 +1414,7 @@ const insertImage = (url) => {
 
               Article: ${articleContent}`;
 
-              const response = await fetch("http://127.0.0.1:8000/generate-article/", {
+              const response = await fetch("https://gp-app-be.onrender.com/generate-article/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
